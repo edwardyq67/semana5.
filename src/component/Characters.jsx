@@ -46,15 +46,20 @@ const Characters = () => {
   }
     
     return (
-        <div>
-            <h1>Characters....bienvenido: {name}</h1>
-            <div>
-                <input type="text" value={nameInput} onChange={e=>setNameInput(e.target.value)} placeholder="nombre del pokemon"/>
-                <button onClick={serchName}>buscar</button>
+        <div className='character'>
+            <div className='leer'>
+                <h1>Pokedex</h1>
+            <h3>Welcom {name}, here you can find your favorite pokemon </h3>
             </div>
-            <div>
-                <select onChange={e=>searchLocations(e.target.value)}>
-                    <option value="">selecciona tipo</option>
+            
+            <div className='character-input'>
+                <label htmlFor="text"></label>
+                <input type="text" value={nameInput} onChange={e=>setNameInput(e.target.value)} placeholder="nombre del pokemon"/>
+                <button onClick={serchName}><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div className='selector'>
+                <select  onChange={e=>searchLocations(e.target.value)}>
+                    <option value=""><h1>selecciona tipo</h1></option>
                     {
                         locationList.map(location=>(
                             <option key={location.url} value={location.url}>{location.name}</option>

@@ -12,9 +12,9 @@ function App() {
 
   return (<HashRouter>
     <div className="App">
-      
+      <div className='contenedor' >
       <Routes>
-            <Route path="/" element={<UserInput/>}/>
+            <Route className="portada1" path="/" element={<UserInput/>}/>
         <Route element={<ProtectedRoutes/>}>
             <Route path="/characters" element={<Characters/>}/>
             <Route path="/characters/:id" element={<CharacterDetail/>}/>
@@ -22,7 +22,7 @@ function App() {
         
         
       </Routes>
-    
+    </div>
     </div>
     </HashRouter>
   )

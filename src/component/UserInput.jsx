@@ -15,11 +15,15 @@ const UserInput = () => {
    }
     
         return (
-        <div> 
-           UserInput
-           <hr />
-           <input type="text" value={userName} onChange={e=>setUserName(e.target.value)} placeholder="nombre"/>
-           <button onClick={dispatchUserName}>submit</button>
+        <div className='portada'> 
+           
+           <h1>USUARIO</h1>
+           <form action="form"> 
+           <label htmlFor="text"></label>
+           <input  type="text" value={userName} onChange={e=>setUserName(e.target.value)} placeholder="nombre"/>
+           <button onClick={dispatchUserName}><i class="fa-solid fa-user"></i></button>
+           </form>
+           
         </div>
     );
 };

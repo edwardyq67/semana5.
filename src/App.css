@@ -1,41 +1,153 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'open Sans', sans-serif;
+}
+.contenedor{
+  background-image: url(./img/119152.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.App{
+  background-color: black;
+  
+}
+.portada{
+  transform: translate(-50%,-50%);
+  position: absolute;
+  left: 20%;
+  top: 43%;
+  width: 400px;
+  box-shadow: 2px 4px 15px 0 rgb(255, 255, 255);
+  padding: 10px;
+}
+.portada form{
+  background-color: rgb(70, 57, 100);
+  height: 40px;
+  width: 300px;
   text-align: center;
+  border-radius: 10%;
 }
+.portada form input{
+  font-size: 20px;
+  margin: 6px;
+  background: none;
+  border: none;
+  outline: none;
+  color: aliceblue;
+}
+.portada form button{
+  font-size: 20px;
+  background-color: rgb(70, 57, 100);
+  color: aliceblue;
+  padding: 5px;
+  border-radius: 10%;
+  border: none;
+  margin-top: 4px;
+}
+.portada form input::after{
+  background: none;
+  border: none;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+}.portada h1{
+  color: azure;
+  margin: 5px;
+  
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.character{
+  width: 80%;
+  height: 100vh;
+  background-image: url(./img/wallpaperbetter.jpg);
+  margin: auto;
+  background-size: cover;
+  position: relative;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.leer{
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  color: rgb(102, 235, 179);
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.character-input{
+  position: absolute;
+  top: 120px;
+  left: 400px;
+  width: 400px;
+  box-shadow: 2px 4px 15px 0 rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10%;
+  background: linear-gradient(90deg, rgba(58,180,74,1) 0%, rgba(29,253,251,1) 50%, rgba(115,69,252,1) 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.character-input input{
+  font-size: 20px;
+  margin: 6px;
+  background: none;
+  border: none;
+  outline: none;
+  color: aliceblue;
+  margin-left: 40px;
 }
-
-.card {
-  padding: 2em;
+.character-input button{
+  font-size: 20px;
+  background-color: rgb(70, 57, 100);
+  color: aliceblue;
+  padding: 5px;
+  border-radius: 10%;
+  border: none;
+  margin-top: 4px;
+  margin-left: 20px;
+  color: rgba(115,69,252,1);
+  background-color: rgba(58,180,74,1);
 }
-
-.read-the-docs {
-  color: #888;
+.selector{
+  position: absolute;
+  top: 130px;
+  left: 100px;
+}
+select{
+  -webkit-animation: none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance: none;
+  outline:0 ;
+  box-shadow: none;
+  border: 0!important;
+  
+  background-image: none;
+}
+select::-ms-expand{
+  display: none;
+}
+select{
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #0ae41c;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select{
+  flex: 1;
+  padding: 0 .5em;
+  cursor: pointer;
+}
+select::after{
+  content:'5px';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #000;
+  cursor: pointer;
+  pointer-events:none ;
+  transition:  .25s all ease;
+}
+select:hover::after{
+  color: #23b499;
 }
