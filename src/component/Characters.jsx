@@ -4,9 +4,11 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CharacterCard from './CharacterCard';
+import Pagination from 'react-bootstrap/Pagination';
+
 
 const Characters = () => {
-    const name=useSelector(state=>state.userName)
+    const name=useSelector(state=>state.userName)//lo traigo
     const [characterList,setCharacteList]=useState([]);
     const [nameInput,setNameInput]=useState("");
     const [locationList,setLocationList]=useState([])
@@ -32,7 +34,7 @@ const Characters = () => {
         
     }
     const [page, setPage] = useState(1);
-  const charactersPerPage = 8;
+  const charactersPerPage = 15;
   const lastCharacterIndex = page * charactersPerPage; //15;
   const firstCharacterIndex = lastCharacterIndex - charactersPerPage; // 10
   const charactersPaginated = characterList.slice(
@@ -49,13 +51,16 @@ const Characters = () => {
         <div className='character'>
             <div className='leer'>
                 <h1>Pokedex</h1>
-            <h3>Welcom {name}, here you can find your favorite pokemon </h3>
+            <h3>Welcom <b>{name}</b>, here you can find your favorite pokemon </h3>
             </div>
             
             <div className='character-input'>
-                <label htmlFor="text"></label>
+                <form action="">
+                    <label htmlFor="text"></label>
                 <input type="text" value={nameInput} onChange={e=>setNameInput(e.target.value)} placeholder="nombre del pokemon"/>
                 <button onClick={serchName}><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                
             </div>
             <div className='selector'>
                 <select  onChange={e=>searchLocations(e.target.value)}>
@@ -67,20 +72,32 @@ const Characters = () => {
                     }
                 </select>
             </div>
-            {
+            <div className="cajaCharacterCard">
+                {
                 charactersPaginated.map(character=>(
                     <CharacterCard key={character.url?character.url:character} url={character.url?character.url:character}/>
                 ))
-            }
-            <button onClick={() => setPage(page - 1)} disabled={page === 1}>
-        Prev page
-      </button>
+            } <div className='empaginado'>
+                <Pagination>
+      
+      <Pagination.Prev onClick={() => setPage(page - 1)} disabled={page === 1}/>
+      
       {pagesNumbers.map((number) => (
-        <button onClick={() => setPage(number)}>{number}</button>
-      ))}
-      <button onClick={() => setPage(page + 1)} disabled={page === totalPages}>
-        Next page
-      </button>
+
+      <Pagination.Item onClick={() => setPage(number)}>{number}</Pagination.Item>
+      
+ ))}
+      
+      
+      <Pagination.Next onClick={() => setPage(page + 1)} disabled={page === totalPages}/>
+      
+    </Pagination>
+            </div>
+            
+            </div>
+            
+               
+           
         </div>
     );
 };

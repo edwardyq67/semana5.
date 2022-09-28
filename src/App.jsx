@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { HashRouter, Routes,Route } from 'react-router-dom'
 
 import './App.css'
@@ -9,7 +9,7 @@ import UserInput from './component/UserInput'
 
 function App() {
   
-
+  document.body.style=`background:black`;
   return (<HashRouter>
     <div className="App">
       <div className='contenedor' >

@@ -9,6 +9,7 @@ const UserInput = () => {
    const[userName,setUserName]=useState("");
    const navigate=useNavigate()//navegar
    const dispatch=useDispatch();//slice....userName.slice.jsx
+   
    const dispatchUserName=()=>{
     dispatch(changeName(userName))//slice....userName.slice.jsx
     navigate("/characters");//navegar

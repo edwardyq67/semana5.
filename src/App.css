@@ -14,7 +14,9 @@
 }
 .App{
   background-color: black;
-  
+  font-family: sans-serif;
+    text-align: center;
+    position: relative;
 }
 .portada{
   transform: translate(-50%,-50%);
@@ -47,7 +49,7 @@
   padding: 5px;
   border-radius: 10%;
   border: none;
-  margin-top: 4px;
+  
 }
 .portada form input::after{
   background: none;
@@ -73,9 +75,10 @@
   color: rgb(102, 235, 179);
 }
 .character-input{
+  margin: 10px;
   position: absolute;
   top: 120px;
-  left: 400px;
+  left: 500px;
   width: 400px;
   box-shadow: 2px 4px 15px 0 rgb(255, 255, 255);
   padding: 10px;
@@ -105,11 +108,11 @@
 }
 .selector{
   position: absolute;
-  top: 130px;
+  top: 140px;
   left: 100px;
 }
 select{
-  -webkit-animation: none;
+  
   -moz-appearance:none;
   -ms-appearance:none;
   appearance: none;
@@ -150,4 +153,131 @@ select::after{
 }
 select:hover::after{
   color: #23b499;
+}
+.cajaCharacterCard{
+position: absolute;
+top: 200px;
+width: 100%;
+height: 100px;
+}
+.normal {
+	background-color: #A8A878;
+	border: 1px solid #6D6D4E;
+  padding: 15px;
+}
+
+.fire {
+	background-color: #F08030;
+	border: 1px solid #9C531F;
+  padding: 15px;
+}
+
+.water {
+	background-color: #6890F0;
+	border: 1px solid #445E9C;
+  padding: 15px;
+}
+
+.electric {
+	background-color: #F8D030;
+	border: 1px solid #A1871F;
+  padding: 15px;
+}
+
+.grass {
+	background-color: #78C850;
+	border: 1px solid #4E8234;
+
+  padding: 15px;}
+
+.ice {
+	background-color: #98D8D8;
+	border: 1px solid #638D8D;
+  padding: 15px;
+}
+
+.ground {
+	background-color: #E0C068;
+	border: 1px solid #927D44;
+  padding: 15px;
+}
+
+.flying {
+	background-color: #A890F0;
+	border: 1px solid #6D5E9C;
+  padding: 15px;
+}
+
+.ghost {
+	background-color: #705898;
+	border: 1px solid #493963;
+  padding: 15px;
+}
+
+.rock {
+	background-color: #B8A038;
+	border: 1px solid #786824;
+  padding: 15px;
+}
+
+.fighting {
+	background-color: #C03028;
+	border: 1px solid #7D1F1A;
+  padding: 15px;
+}
+
+.poison {
+	background-color: #A040A0;
+	border: 1px solid #682A68;
+  padding: 15px;
+}
+
+.psychic {
+	background-color: #F85888;
+	border: 1px solid #A13959;
+  padding: 15px;
+}
+
+.bug {
+	background-color: #A8B820;
+	border: 1px solid #6D7815;
+  padding: 15px;
+}
+
+.dark {
+	background-color: #705848;
+	border: 1px solid #49392F;
+  padding: 15px;
+}
+
+.steel {
+	background-color: #B8B8D0;
+	border: 1px solid #787887;
+  padding: 15px;
+}
+
+.dragon {
+	background-color: #7038F8;
+	border: 1px solid #4924A1;
+  padding: 15px;
+}
+.containar{
+ 
+  color: beige;
+  margin: 20px;
+  display: inline-block;
+  box-shadow: 2px 4px 15px 0px rgb(255, 255, 255);
+}
+.butom{
+  position: absolute;
+  top: 900px;
+  left: 700px;
+}
+.empaginado{
+  position: absolute;
+  left: 650px;
+  
+}
+.leer h3 b{
+  color: #6890F0;
 }
