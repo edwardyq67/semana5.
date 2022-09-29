@@ -7,10 +7,13 @@ export const userNameSlice = createSlice({
     changeName: (state, action) => {
       const userName = action.payload;
       return userName
+    },
+    changeColor:(state,action)=>{
+
     }
   }
 });
 
-export const { changeName } = userNameSlice.actions;
+export const { changeName,changeColor } = userNameSlice.actions;
 
 export default userNameSlice.reducer;

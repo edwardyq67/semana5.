@@ -57,14 +57,14 @@ const Characters = () => {
             <div className='character-input'>
                 <form action="">
                     <label htmlFor="text"></label>
-                <input type="text" value={nameInput} onChange={e=>setNameInput(e.target.value)} placeholder="nombre del pokemon"/>
+                <input type="text" value={nameInput} onChange={e=>setNameInput(e.target.value)} placeholder="pokemon name"/>
                 <button onClick={serchName}><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 
             </div>
             <div className='selector'>
                 <select  onChange={e=>searchLocations(e.target.value)}>
-                    <option value=""><h1>selecciona tipo</h1></option>
+                    <option value=""><h1>select type of pokemon</h1></option>
                     {
                         locationList.map(location=>(
                             <option key={location.url} value={location.url}>{location.name}</option>
@@ -75,7 +75,7 @@ const Characters = () => {
             <div className="cajaCharacterCard">
                 {
                 charactersPaginated.map(character=>(
-                    <CharacterCard key={character.url?character.url:character} url={character.url?character.url:character}/>
+                    <CharacterCard  key={character.url?character.url:character} url={character.url?character.url:character}/>
                 ))
             } <div className='empaginado'>
                 <Pagination>

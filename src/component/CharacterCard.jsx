@@ -2,12 +2,15 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
+
 
 const CharacterCard = ({url}) => {
     const [character,setCharacter]=useState({})
     const [color,setColor]=useState("")
     const navigate=useNavigate();
+    
     useEffect(()=>{
         axios.get(url)
         .then(res=>{setCharacter(res.data)
@@ -15,6 +18,7 @@ const CharacterCard = ({url}) => {
         })
     },[])
     console.log(character)
+    
     return (
         <div className="containar" >
             <div className={color}>
