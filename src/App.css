@@ -292,7 +292,9 @@ height: 100px;
   background-image: url(./img/img.jpg);
   width: 100%;
   height: 100vh;
-  
+  margin: auto;
+  background-size: cover;
+  position: relative;
 }
 .dentro{
   position: relative;
